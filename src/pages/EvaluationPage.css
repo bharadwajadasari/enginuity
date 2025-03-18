@@ -1,0 +1,138 @@
+.evaluation-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.page-header h2 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.page-header p {
+  color: #666;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.evaluation-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.criterion-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.criterion-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.criterion-section h3 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.criterion-description {
+  color: #666;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.criterion-weight {
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.score-input, .comment-input {
+  margin-bottom: 1rem;
+}
+
+.score-input label, .comment-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.score-input input {
+  width: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.comment-input textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancel-button, .submit-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background-color: #e9ecef;
+}
+
+.submit-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #dc3545;
+} 

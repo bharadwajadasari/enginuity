@@ -1,0 +1,93 @@
+.promotion-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.page-header h2 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.page-header p {
+  color: #666;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.engineers-section {
+  margin-bottom: 3rem;
+}
+
+.engineers-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.engineers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.engineer-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.engineer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.engineer-info h4 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.engineer-info p {
+  color: #666;
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.engineer-info .department {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.promotion-status {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.readiness-score {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #28a745;
+  margin-bottom: 0.5rem;
+}
+
+.time-in-role {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+} 
