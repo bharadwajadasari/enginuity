@@ -21,31 +21,65 @@
   font-size: 1.1rem;
 }
 
-.engineers-section {
-  margin-bottom: 3rem;
+.calibration-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
 }
 
-.engineers-section h3 {
+.engineers-list {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.engineers-list h3 {
   color: #2c3e50;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.no-engineers {
+  text-align: center;
+  padding: 2rem;
+}
+
+.no-engineers p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.add-engineer-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-engineer-button:hover {
+  background-color: #0056b3;
 }
 
 .engineers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .engineer-card {
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   border: 1px solid #e9ecef;
   border-radius: 8px;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: inherit;
+  padding: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .engineer-card:hover {
@@ -53,21 +87,21 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.engineer-card.evaluated {
-  opacity: 0.8;
-  cursor: default;
+.engineer-card.selected {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
 }
 
 .engineer-info h4 {
   color: #2c3e50;
   margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .engineer-info p {
   color: #666;
   margin: 0.25rem 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .engineer-info .department {
@@ -75,24 +109,119 @@
   font-weight: 500;
 }
 
-.evaluation-status {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
+.calibration-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.engineer-summary {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.engineer-summary h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-item label {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-item span {
+  color: #2c3e50;
+  font-size: 1rem;
   font-weight: 500;
 }
 
-.evaluation-status.pending {
-  background-color: #fff3cd;
-  color: #856404;
+.calibration-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
 }
 
-.evaluation-status.completed {
-  background-color: #d4edda;
-  color: #155724;
+.calibration-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.calibration-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.rating-fields {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.rating-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rating-field label {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.rating-field input {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100px;
+}
+
+.rating-field textarea {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
 }
 
 .loading {
@@ -100,4 +229,116 @@
   padding: 2rem;
   font-size: 1.2rem;
   color: #666;
+}
+
+.write-up-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.write-up-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.write-up-header h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.export-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.export-button:hover {
+  background-color: #218838;
+}
+
+.write-up-content {
+  line-height: 1.6;
+}
+
+.write-up-summary {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.write-up-summary h3 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+}
+
+.write-up-summary p {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.write-up-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.technical-delivery, .communication {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.technical-delivery h3, .communication h3 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.technical-delivery p, .communication p {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.technical-delivery strong, .communication strong {
+  color: #34495e;
+  margin-right: 0.5rem;
+}
+
+.generate-writeup-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 1rem;
+  transition: background-color 0.2s;
+}
+
+.generate-writeup-button:hover {
+  background-color: #27ae60;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
 } 
