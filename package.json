@@ -13,7 +13,14 @@
     "create-db": "node server/create-db.js",
     "init-db": "node server/init-db.js",
     "setup-db": "npm run create-db && npm run init-db",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --maxWorkers=2",
+    "test:frontend": "jest src",
+    "test:backend": "jest server",
+    "test:api": "jest server/__tests__/api",
+    "test:db": "jest server/__tests__/db"
   },
   "keywords": [
     "engineer",
@@ -27,10 +34,8 @@
   "dependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "cors": "^2.8.5",
-    "docx": "^9.3.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "file-saver": "^2.0.5",
     "openai": "^4.87.3",
     "pg": "^8.14.1",
     "react": "^18.2.0",
